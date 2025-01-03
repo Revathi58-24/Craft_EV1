@@ -16,7 +16,7 @@ export const Craftupload = () => {
 
   const getCategory = () => {
     axios
-      .get("http://localhost:5000/categories")
+      .get("https://craft-db.onrender.com/categories")
       .then((response) => {
         setCategories(response.data);
       })
@@ -34,7 +34,7 @@ export const Craftupload = () => {
     formData.append("category", category);
     
     axios
-      .post("http://localhost:5000/post", formData, {
+      .post("https://craft-db.onrender.com/post", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
