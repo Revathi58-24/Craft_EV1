@@ -18,7 +18,7 @@ export const Manage = () => {
 
   const handleRead = () => {
     axios
-      .get("http://localhost:5000/get")
+      .get("https://craft-db.onrender.com/get")
       .then((res) => {
         setData(res.data);
       })
@@ -28,7 +28,7 @@ export const Manage = () => {
   };
 
   const getCategory = () => {
-    axios.get("http://localhost:5000/categories")
+    axios.get("https://craft-db.onrender.com/categories")
       .then((response) => {
         setCategories(response.data);
       })
@@ -56,7 +56,7 @@ export const Manage = () => {
     formData.append("category", category);
 
     axios
-      .put(`http://localhost:5000/updating/${id}`, formData, {
+      .put(`https://craft-db.onrender.com/updating/${id}`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -77,7 +77,7 @@ export const Manage = () => {
 
   const handleDelete = (craft) => {
     axios
-      .delete(`http://localhost:5000/delete/${craft._id}`)
+      .delete(`https://craft-db.onrender.com/delete/${craft._id}`)
       .then(() => {
         alert("Data deleted");
         handleRead();
