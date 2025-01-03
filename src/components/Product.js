@@ -11,7 +11,7 @@ const Product = () => {
   useEffect(() => {
     setIsLoading(true); // Set loading to true before fetching
     axios
-      .get("http://localhost:5000/get")
+      .get("https://craft-db.onrender.com/get")
       .then((response) => {
         setProducts(response.data);
         const uniqueCategories = [
@@ -254,7 +254,7 @@ const Product = () => {
               >
                 {product.image && product.image.data ? (
                   <img
-                    src={`http://localhost:5000/image/${product._id}`}
+                    src={`https://craft-db.onrender.com//image/${product._id}`}
                     alt={product.name}
                     style={imageStyle}
                   />
