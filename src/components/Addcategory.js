@@ -15,7 +15,7 @@ export const Addcategory = () => {
 
     // Insert new category
     const create = () => {
-        axios.post('http://localhost:5000/category', { category })
+        axios.post('https://craft-db.onrender.com/category', { category })
             .then(() => {
                 alert('Category has been posted successfully');
                 setCategory('');
@@ -27,7 +27,7 @@ export const Addcategory = () => {
 
     // Get categories
     const getCategory = () => {
-        axios.get('http://localhost:5000/categories')
+        axios.get('https://craft-db.onrender.com/categories')
             .then((response) => {
                 setCategories(response.data);
             })
@@ -45,7 +45,7 @@ export const Addcategory = () => {
     // Handle Update
     const handleUpdate = (e) => {
         e.preventDefault();
-        axios.put(`http://localhost:5000/category/${id}`, { category })
+        axios.put(`https://craft-db.onrender.com/category/${id}`, { category })
             .then(() => {
                 alert("Data updated successfully");
                 setCategory("");
@@ -59,7 +59,7 @@ export const Addcategory = () => {
 
     // Handle Delete
     const handleDelete = (cat) => {
-        axios.delete(`http://localhost:5000/category/${cat._id}`)
+        axios.delete(`https://craft-db.onrender.com/category/${cat._id}`)
             .then(() => {
                 alert("Data deleted");
                 getCategory(); // Refresh the list after deleting a category
