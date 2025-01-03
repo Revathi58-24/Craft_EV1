@@ -186,7 +186,7 @@ export const Manage = () => {
                   <td style={thTdStyle}>
                     {product.image && (
                       <img
-                        src={`http://localhost:5000/image/${product._id}`}
+                        src={`https://craft-db.onrender.com/image/${product._id}`}
                         alt={product.name}
                         width="50"
                         height="50"
