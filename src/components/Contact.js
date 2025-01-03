@@ -15,7 +15,7 @@ const Contact = () => {
   useEffect(() => {
     // Fetch product data to populate checkboxes
     axios
-      .get("http://localhost:5000/get")
+      .get("https://craft-db.onrender.com/get")
       .then((response) => {
         setProducts(response.data);
       })
