@@ -1,0 +1,141 @@
+/* General container styling */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+/* Sticky Navbar */
+.navbar {
+  height: 80px;
+  width: 100%;
+  background-color: #8FBC8B;
+  position: fixed; /* Sticks to the top of the viewport */
+  top: 0; /* Distance from the top of the viewport */
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Stays on top of other elements */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Vertically centers items */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+}
+
+/* Menu icon for smaller screens */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+/* Navigation elements */
+.nav-elements ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+/* List item styling */
+.nav-elements ul li {
+  position: relative; /* For dropdown positioning */
+}
+
+/* Margin between list items */
+.nav-elements ul li:not(:last-child) {
+  margin-right: 60px;
+}
+
+/* Link styling */
+.nav-elements ul a {
+  font-size: 16px;
+  font-weight: 400;
+  color: #2f234f;
+  text-decoration: none;
+}
+
+/* Active link styling */
+.nav-elements ul a.active {
+  color: #574c4c;
+  font-weight: 500;
+  position: relative;
+}
+
+/* Underline for active link */
+.nav-elements ul a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #574c4c;
+}
+
+/* Responsive design for tablets */
+@media (max-width: 768px) {
+  .nav-elements ul li:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+/* Responsive design for mobile */
+@media (max-width: 600px) {
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav-elements {
+    position: absolute;
+    right: 0;
+    top: 80px; /* Align with navbar height */
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+    backdrop-filter: blur(10px);
+    width: 0;
+    height: calc(60vh - 60px);
+    transition: all 0.3s ease-in;
+    overflow: hidden;
+    z-index: 2;
+  }
+
+  .nav-elements.active {
+    width: 270px;
+  }
+
+  .nav-elements ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-elements ul li {
+    margin-right: unset;
+    margin-top: 22px;
+  }
+}
+/* Dropdown menu styling */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%; 
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  width: 150px; /* Adjust width as needed */
+  height: auto; /* Height will adjust based on content */
+  padding: 5px 10px; /* Reduced padding */
+}
+
+/* Dropdown menu items */
+.dropdown-menu li {
+  padding: 5px 10px; /* Reduced padding for list items */
+  font-size: 14px; /* Adjust font size as needed */
+}
+
+/* Show dropdown when hover */
+.nav-item:hover .dropdown-menu {
+  display: block;
+}

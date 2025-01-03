@@ -1,0 +1,180 @@
+/* General Styles for About Section */
+.about-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  margin-left: 90px;
+  width: 80%;
+}
+
+.about-content h2,
+.about-content p {
+  text-align: left;
+  width: 100%;
+}
+
+.about-content h2 {
+  margin-bottom: 10px;
+  color: #B76E79;
+  font-weight: 700;
+}
+
+.about-content p {
+  margin-bottom: 20px;
+  color: #006241;
+  font-weight: 600;
+  font-size: large;
+}
+
+/* Image styling */
+.about-image {
+  padding: 20px;
+  margin-left: 40px;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* For medium-sized devices like tablets (≥768px and ≤1024px) */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .about-content {
+    margin-left: 40px; /* Reduce margin for smaller screens */
+    width: 90%; /* Reduce width to fit better */
+    margin-top: 60px; /* Adjust top margin */
+  }
+
+  .about-content h2,
+  .about-content p {
+    text-align: center; /* Center text for medium screens */
+  }
+
+  .about-image {
+    margin-left: 0; /* Center the image */
+    margin-top: 20px;
+  }
+
+  .about-image img {
+    width: 100%; /* Ensure the image is responsive */
+  }
+}
+
+/* For small devices like phones (≤768px) */
+@media (max-width: 768px) {
+  .about-content {
+    margin-left: 20px; /* Reduce margin further for phones */
+    width: 100%; /* Full width for small screens */
+    margin-top: 40px; /* Reduce top margin */
+  }
+
+  .about-content h2 {
+    font-size: 22px; /* Make the title smaller for mobile screens */
+  }
+
+  .about-content p {
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
+
+  .about-image {
+    margin-left: 0; /* Ensure image is centered */
+    margin-top: 15px;
+  }
+
+  .about-image img {
+    width: 100%; /* Ensure the image takes up full width */
+  }
+}
+
+/* For very small screens (like phones in portrait mode) */
+@media (max-width: 480px) {
+  .about-content {
+    margin-left: 10px; /* Further reduce margin */
+    width: 100%;
+    margin-top: 20px; /* Small top margin */
+  }
+
+  .about-content h2 {
+    font-size: 18px; /* Further reduce title font size */
+  }
+
+  .about-content p {
+    font-size: 14px; /* Further reduce paragraph font size */
+  }
+
+  .about-image {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .about-image img {
+    width: 100%;
+    height: auto; /* Ensure the image adjusts without stretching */
+  }
+}
+
+
+
+/* Ensure the table is responsive */
+.bg-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%; /* Set table width to 100% for responsiveness */
+  max-width: 700px; /* Keep max width to prevent it from being too wide on larger screens */
+  margin: 0 auto; /* Center the table */
+  border: none; /* Remove border for cleaner look */
+  box-sizing: border-box; /* Include padding and border in the width/height */
+}
+
+/* Responsive styling for the table content */
+.bg-image h1 {
+  font-family: sans-serif;
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px; /* Add some space below the heading */
+}
+
+.bg-image td {
+  padding: 20px;
+}
+
+.bg-image p {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: justify;
+  max-width: 70%;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+@media (max-width: 768px) {
+  .bg-image {
+    width: 100%; /* Make the table full width on smaller screens */
+    padding: 10px; /* Add some padding around the content */
+  }
+
+  .bg-image h1 {
+    font-size: 24px; /* Adjust font size for smaller screens */
+  }
+
+  .bg-image p {
+    font-size: 16px; /* Adjust font size for smaller screens */
+    max-width: 90%; /* Allow the text to expand on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .bg-image h1 {
+    font-size: 20px; /* Further reduce font size for mobile screens */
+  }
+
+  .bg-image p {
+    font-size: 14px; /* Further reduce font size for mobile screens */
+    max-width: 90%; /* Allow the text to expand on mobile */
+  }
+}

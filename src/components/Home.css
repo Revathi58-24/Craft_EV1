@@ -1,0 +1,75 @@
+/* Keep the main image the same size (450px height and full width) */
+.home-main-image {
+    width: 100%;
+    height: 555px; /* Keep the original height */
+  }
+  
+  /* Keep the background image the same size */
+  .home-background-image {
+    width: 700px; /* Keep the original width */
+    height: 400px; /* Keep the original height */
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* Make text overlay more responsive */
+  .home-text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 48%; /* 48% width on large screens */
+    max-width: 900px; /* Limit max width */
+    box-sizing: border-box; /* Include padding in width calculation */
+  }
+  
+  /* Add responsive font size for smaller devices */
+  .home-text-overlay h2 {
+    font-size: 24px;
+  }
+  
+  .home-text-overlay p {
+    font-size: 20px;
+    font-family: 'cursive';
+    color: #355E3B;
+    text-align: justify;
+    padding: 15px;
+  }
+  
+  /* Make text more responsive on smaller screens */
+  @media (max-width: 768px) {
+    .home-text-overlay {
+      padding: 15px;
+      font-size: 18px;
+      width: 80%; /* Increase width on medium screens like tablets */
+    }
+  
+    .home-text-overlay h2 {
+      font-size: 20px;
+    }
+  
+    .home-text-overlay p {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .home-text-overlay {
+      padding: 10px;
+      width: 95%; /* Further increase width on very small screens like phones */
+    }
+  
+    .home-text-overlay h2 {
+      font-size: 18px;
+    }
+  
+    .home-text-overlay p {
+      font-size: 14px;
+    }
+  }
+  
